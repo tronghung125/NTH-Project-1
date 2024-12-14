@@ -30,10 +30,41 @@ class nthKhoaController extends Controller
     public function nthEditSubmit(Request $request)
     {
         $makh = $request->input('nthmakh');
-        $tenkh = $request->input('nthmakh');
+        $tenkh = $request->input('nthtenkh');
         DB::update("UPDATE nthkhoa SET nthtenkh = ? WHERE nthmakh = ?",[$tenkh,$makh]);
         return redirect('/khoas');
     }
-    
-
+    //insert
+    public function nthInsert()
+    {
+        return view('nthKhoa.nthInsert');
+    }
+    //insert post
+    public function nthInsertSubmit(Request $request)
+    {//Kiểm tra dữ liệu
+        $validate = $request->validate([
+            'nthmakh' => 'required|max:2',
+            'nthtenkh' => 'required|max:50'
+            ],
+            [
+            'nthmakh.required'=>'Vui lòng nhập mã khoa.',
+            'nthmakh.max'=>'Mã khoa tối đa 2 ký tự.',
+            'nthtenkh.required'=>'Vui lòng nhập tên khoa.',
+            'nthtenkh.min'=>'Tên khoa phải có ít nhất 50 ký tự.',
+            ]
+        );
+        //lấy dữ liệu trên form
+        $makh = $request->input('nthmakh');
+        $tenkh = $request->input('nthtenkh');
+        //ghi dữ liệu xuống DB
+        DB::insert("INSERT INTO nthkhoa(nthmakh, nthtenkh) VALUES(?, ?)", [$makh, $tenkh]);        
+        //Chuyển sang trang danh sách
+        return redirect('/khoas');
+    }
+    //delete
+    public function nthDelete($makh)
+    {
+        DB::delete("DELETE FROM nthkhoa WHERE nthmakh=?",[$makh]);
+        return redirect('/khoas');
+    }
 }

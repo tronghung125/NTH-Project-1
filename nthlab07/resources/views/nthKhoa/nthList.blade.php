@@ -32,14 +32,17 @@
                         <td>{{$item->nthmakh}}</td>
                         <td>{{$item->nthtenkh}}</td>
                         <td>
-                            <a href="/khoas/detail/{{$item->nthmakh}}" class="btn btn-success"> Chi tiết </a>                            
+                            <a href="/khoas/detail/{{$item->nthmakh}}" class="btn btn-success">Chi tiết</a>                            
                             <a href="/khoas/edit/{{$item->nthmakh}}" class="btn btn-primary"> Sửa </a>
-                            <a href="/khoas/delete/{{$item->nthmakh}}" class="btn btn-danger"> Xoá </a>
+                            <a href="/khoas/delete/{{$item->nthmakh}}" class="btn btn-danger"
+                              onclick="return confirm('Bạn chắc chắn muốn xoá')"
+                            > Xoá </a>
                         </td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            <a href="/khoas/insert" class="btn btn-primary">Thêm mới</a>
     </section>
 </body>
 </html>
