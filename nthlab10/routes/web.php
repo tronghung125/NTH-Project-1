@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\nthNhaCCController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -11,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+
+
 
 Route::get('/', function () {
     return view('welcome');
-});
+});*/
+Route::get('/nhacc', [nthNhaCCController::class,'list'])->name('nhacc.nthlist');

@@ -11,20 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('nthctpxuat', function (Blueprint $table) {
+        Schema::create('nthctpnhap', function (Blueprint $table) 
+        {
             //$table->id();
             //$table->timestamps();
-
-            $table->string('nthSoPX');
+            $table->string('nthSoPN');
             $table->string('nthMaVTu');
-            $table->integer('nthSlXuat');
-            $table->float('nthDgXuat');
+            $table->integer('nthSlNhap');
+            $table->float('nthDgNhap');
 
-            $table->primary(['nthSoPX','nthMaVTu']);
+            $table->primary(['nthSoPN','nthMaVTu']);
 
-            $table->foreign('nthSoPX')->references('nthSoPX')->on('nthpxuat');
+            $table->foreign('nthSoPN')->references('nthSoPN')->on('nthpnhap');
             $table->foreign('nthMaVTu')->references('nthMaVTu')->on('nthvattu');
-        });
+        });    
     }
 
     /**
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('nthctpxuat');
+        Schema::dropIfExists('nthctpnhap');
     }
 };
