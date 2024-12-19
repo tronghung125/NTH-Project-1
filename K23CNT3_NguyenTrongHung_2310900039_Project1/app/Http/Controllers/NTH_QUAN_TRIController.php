@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\NTH_QUAN_TRI;
 
 class NTH_QUAN_TRIController extends Controller
 {
@@ -11,9 +12,10 @@ class NTH_QUAN_TRIController extends Controller
     {
         return view('nthLogin.nthlogin');
     }
-    
-    public function nthLoginSubmit(Request $request)
+
+    public function nthLoginSubmit()
     {
-        return view('nthLogin.nthlogin');
+        $nthquantri = NTH_QUAN_TRI::all();
+        return view('nthLogin.nthloginsubmit', ['nthquantri'=>$nthquantri]);
     }
 }

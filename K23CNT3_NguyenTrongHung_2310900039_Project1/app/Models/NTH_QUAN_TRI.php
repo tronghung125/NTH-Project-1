@@ -9,4 +9,5 @@ class NTH_QUAN_TRI extends Model
 {
     use HasFactory;
     protected $table="NTH_QUAN_TRI";
+    public $timestamps = false;
 }
