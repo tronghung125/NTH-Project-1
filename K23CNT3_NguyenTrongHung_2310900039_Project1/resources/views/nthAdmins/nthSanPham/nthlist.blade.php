@@ -42,7 +42,6 @@
                                 <img src="{{ asset('storage/' . $item->nthHinhAnh) }}" alt="Sản phẩm {{ $item->nthMaSanPham }}" width="100" height="100">
                             </td>
                             <td>{{ $item->nthSoLuong }}</td>
-                            <td>{{ number_format($item->nthDonGia, 0, ',', '.') }} VND</td>
                             <td>{{ $item->nthMaLoai }}</td>
                             <td>
                                 @if($item->nthTrangThai == 0)

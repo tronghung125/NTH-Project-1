@@ -46,9 +46,9 @@ Route::get('/nthadmins/nth-loai-san-pham/nth-delete/{id}',[NTH_LOAI_SAN_PHAMCont
 
 //Sản phẩm
 Route::get('/nthadmins/nth-san-pham',[NTH_SAN_PHAMController::class,'nthList'])
-        ->name('admins.nthsanpham');
+        ->name('nthAdmins.nthSanPham');
 //thêm
 Route::get('/nthadmins/nth-loai-san-pham/nth-create',[NTH_SAN_PHAMController::class,'nthCreate'])
-        ->name('nthAdmins.nthLoaiSanPham.nthcreate');
+        ->name('nthAdmins.nthSanPham.nthcreate');
 Route::post('/nthadmins/nth-loai-san-pham/nth-create',[NTH_SAN_PHAMController::class,'nthCreateSubmit'])
-        ->name('nthAdmins.nthLoaiSanPham.nthcreatesubmit');
+        ->name('nthAdmins.nthSanPham.nthcreatesubmit');

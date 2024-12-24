@@ -1,11 +1,11 @@
-@extends('_layouts.admins._master')
+@extends('Layout.admins._master')
 @section('title','Create  Sản Phẩm')
     
 @section('content-body')
     <div class="container border">
         <div class="row">
             <div class="col">
-                <form action="{{route('nthadmin.nthsanpham.nthCreateSubmit')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('nthAdmins.nthSanPham.nthcreatesubmit')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card">
                         <div class="card-header">

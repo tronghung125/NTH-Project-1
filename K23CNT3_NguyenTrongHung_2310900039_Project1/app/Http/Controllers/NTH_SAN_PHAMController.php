@@ -20,7 +20,8 @@ class NTH_SAN_PHAMController extends Controller
     public function nthCreateSubmit(Request $request)
     {
     // Validate input
-    $validatedData = $request->validate([
+        $validatedData = $request->validate
+        ([
         'nthMaSanPham' => 'required|unique:nth_SAN_PHAM,nthMaSanPham',
         'nthTenSanPham' => 'required|string|max:255',
         'nthHinhAnh' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
@@ -28,6 +29,6 @@ class NTH_SAN_PHAMController extends Controller
         'nthDonGia' => 'required|numeric',
         'nthMaLoai' => 'required|exists:nth_LOAI_SAN_PHAM,id',
         'nthTrangThai' => 'required|in:0,1',
-    ]);
+        ]);
     }
 }
