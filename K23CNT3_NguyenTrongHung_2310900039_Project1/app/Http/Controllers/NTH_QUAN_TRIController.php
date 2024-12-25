@@ -16,6 +16,10 @@ class NTH_QUAN_TRIController extends Controller
     public function nthLoginSubmit()
     {
         $nthquantri = NTH_QUAN_TRI::all();
-        return view('nthLogin.nthloginsubmit', ['nthquantri'=>$nthquantri]);
+        return view('nthAdmins.index', ['nthquantri'=>$nthquantri]);
+    }
+    public function nthLogout()
+    {
+        return view('nthLogin.nthlogin');
     }
 }

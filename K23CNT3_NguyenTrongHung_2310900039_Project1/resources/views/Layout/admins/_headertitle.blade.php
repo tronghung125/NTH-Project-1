@@ -19,7 +19,7 @@
                 <li><a class="dropdown-item" href="">Hồ sơ</a></li>
                 <li><a class="dropdown-item" href="">Cài đặt chính</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/">Đăng xuất</a></li>
+                <li><a class="dropdown-item" href="{{route('admins.nthLogout')}}">Đăng xuất</a></li>
             </ul>
         </div>
 

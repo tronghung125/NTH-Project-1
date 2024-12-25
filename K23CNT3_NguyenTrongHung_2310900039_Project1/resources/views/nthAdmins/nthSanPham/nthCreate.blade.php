@@ -5,7 +5,7 @@
     <div class="container border">
         <div class="row">
             <div class="col">
-                <form action="{{route('nthAdmins.nthSanPham.nthcreatesubmit')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('nthAdmins.nthSanPham.nthcreatesubmit')}}" method="POST" >
                     @csrf
                     <div class="card">
                         <div class="card-header">

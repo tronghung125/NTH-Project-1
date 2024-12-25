@@ -31,7 +31,7 @@
                         <td>{{$item->nthTenLoai}}</td>
                         <td>{{$item->nthTrangThai}}</td>
                         <td>
-                            view
+                            <a href="/nthadmins/nth-loai-san-pham/nth-detail/{{$item->id}}" class="btn btn-success">Chi tiết</a>
                             <a href="/nthadmins/nth-loai-san-pham/nth-edit/{{$item->id}}" class="btn btn-primary">Sửa</a>
                             <a href="/nthadmins/nth-loai-san-pham/nth-delete/{{$item->id}}" class="btn btn-danger"
                             onclick="return confirm('Bạn có muốn xoá không ?')">Xoá</a>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\NTH_LOAI_SAN_PHAM;
+use App\Models\NTH_LOAI_SAN_PHAM;//model
 
 class NTH_LOAI_SAN_PHAMController extends Controller
 {
@@ -68,5 +68,11 @@ class NTH_LOAI_SAN_PHAMController extends Controller
         $nthLoaiSanPham = NTH_LOAI_SAN_PHAM::find($id);
         $nthLoaiSanPham->delete();
         return redirect()->route('admins.nthloaisanpham');
+    }
+    //Xem chi tiết
+    public function nthDetail($id)
+    {
+        $nthLoaiSanPham = NTH_LOAI_SAN_PHAM::where('id', $id)->first();
+        return view('nthAdmins.nthLoaiSanPham.nthdetail',['nthLoaiSanPham'=> $nthLoaiSanPham]);
     }
 }

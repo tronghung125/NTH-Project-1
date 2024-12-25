@@ -6,7 +6,7 @@
         <div class="row mb-4">
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <h1>Danh Sách Sản Phẩm</h1>
-                <a href="{{route('nthAdmins.nthLoaiSanPham.nthcreate')}}" class="btn btn-success btn-lg">
+                <a href="{{route('nthAdmins.nthSanPham.nthcreate')}}" class="btn btn-success btn-lg">
                     <i class="fa-solid fa-plus-circle"></i> Thêm Mới
                 </a>
             </div>
@@ -15,7 +15,7 @@
             <table class="table table-striped table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th class="text-center">STT</th>
                         <th>Mã sản phẩm</th>
                         <th>Tên sản phẩm</th>
                         <th>Hình Ảnh</th>
@@ -35,25 +35,27 @@
                             $stt++;
                         @endphp
                         <tr>
-                            <td>{{ $stt }}</td>
+                            <td class="text-center">{{ $stt }}</td>
                             <td>{{ $item->nthMaSanPham }}</td>
                             <td>{{ $item->nthTenSanPham }}</td>
                             <td style="display: flex; justify-content: center; align-items: center; height: 100px;">
                                 <img src="{{ asset('storage/' . $item->nthHinhAnh) }}" alt="Sản phẩm {{ $item->nthMaSanPham }}" width="100" height="100">
                             </td>
                             <td>{{ $item->nthSoLuong }}</td>
+                            <td>{{ $item->nthDonGia}}</td>
                             <td>{{ $item->nthMaLoai }}</td>
                             <td>
                                 @if($item->nthTrangThai == 0)
-                                    <span class="badge bg-success">Hiển Thị</span>
+                                    <span class="">0</span>
                                 @else
-                                    <span class="badge bg-danger">Khóa</span>
+                                    <span class="">1</span>
                                 @endif
                             </td>
                             <td >
-                                view
-                                <a href="/nthadmins/nth-loai-san-pham/nth-edit/{{$item->id}}" class="btn btn-primary">Sửa</a>
-                                xoá
+                                <a href="/nthadmins/nth-san-pham/nth-detail/{{$item->id}}" class="btn btn-success">Chi tiết</a>
+                                <a href="/nthadmins/nth-san-pham/nth-edit/{{$item->id}}" class="btn btn-primary">Sửa</a>
+                                <a href="/nthadmins/nth-san-pham/nth-delete/{{$item->id}}" class="btn btn-danger"
+                                    onclick="return confirm('Bạn có muốn xoá không ?')">Xoá</a>
                             </td>
                         </tr>
                     @empty

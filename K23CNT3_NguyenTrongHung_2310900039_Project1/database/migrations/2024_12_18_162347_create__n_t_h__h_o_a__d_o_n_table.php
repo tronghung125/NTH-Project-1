@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('NTH_HOA_DON', function (Blueprint $table) {
             $table->id();
             $table->string('nthMaHoaDon',255);
-            $table->string('nthMaKhachHang',255)->references('id')->on('NTH_KHACH_HANG');
+            $table->string('nthMaKhachHang',255)->references('id')->on('NTH_KHACH_HANG1');
             $table->date('nthNgayHoaDon');
             $table->string('nthHoTenKhachHang');
             $table->string('nthEmail',255);
