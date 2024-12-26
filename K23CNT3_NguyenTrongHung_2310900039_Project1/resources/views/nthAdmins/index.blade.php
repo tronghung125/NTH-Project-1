@@ -106,7 +106,7 @@
                 labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 datasets: [{
                     label: 'Lượt Truy Cập',
-                    data: [1200, 1900, 1500, 2200, 1800, 2500, 2700, 2400, 2600, 2800, 3000, 3200],
+                    data: [0, 0, 0, 2200, 1800, 2500, 2700, 2400, 2600, 2800, 3000, 3200],
                     fill: false,
                     borderColor: 'rgba(75, 192, 192, 1)',
                     tension: 0.1

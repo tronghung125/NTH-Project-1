@@ -84,7 +84,7 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <a href="{{ route('nthAdmins.nthSanPham') }}" class="btn btn-secondary">Quay lại danh sách</a>
+                    <a href="{{ route('nthAdmins.nthSanPham') }}" class="btn btn-secondary">Quay lại </a>
                 </div>
             </div>
         </div>

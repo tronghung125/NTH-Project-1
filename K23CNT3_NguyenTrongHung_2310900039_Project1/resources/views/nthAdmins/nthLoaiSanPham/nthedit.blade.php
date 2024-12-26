@@ -46,7 +46,7 @@
                         </div>
                         <div class="card-footer">
                             <button class="btn btn-success" type="submit">Cập nhật</button>
-                            <a href="{{ route('admins.nthloaisanpham') }}" class="btn btn-primary">Trở lại</a>
+                            <a href="{{ route('admins.nthloaisanpham') }}" class="btn btn-primary">Quay lại</a>
                         </div>
                     </div>
                 </form>

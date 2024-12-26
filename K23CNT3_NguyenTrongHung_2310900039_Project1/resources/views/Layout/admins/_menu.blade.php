@@ -1,7 +1,14 @@
 <ul class="list-group">
-    <li class="list-group-item active" aria-current="true">Quản trị nội dung</li>
+    <li class="list-group-item active" aria-current="true">Nội dung</li>
     <li class="list-group-item">
-        <a href="/nthadmins/index">Danh sách quản trị</a>
+        <a href="/nthadmins/index">
+            Thống kê hệ thống
+        </a>
+    </li>
+    <li class="list-group-item">
+        <a href="/nthadmins/nth-quan-tri">
+            Danh sách quản trị
+        </a>
     </li>
     <li class="list-group-item">
         <a href="/nthadmins/nth-loai-san-pham">
@@ -9,9 +16,18 @@
         </a>
     </li>
     <li class="list-group-item">
-        <a href="/nthadmins/nth-san-pham">Danh sách sản phẩm</a>
+        <a href="/nthadmins/nth-san-pham">
+            Danh sách sản phẩm
+        </a>
     </li>
     <li class="list-group-item">
-        <a href="">Danh sách khách hàng</a>
+        <a href="/nthadmins/nth-khach-hang">
+            Danh sách khách hàng
+        </a>
+    </li>
+    <li class="list-group-item">
+        <a href="">
+            Danh sách hoá đơn
+        </a>
     </li>
   </ul>
