@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('NTH_HOA_DON', function (Blueprint $table) {
             $table->id();
-            $table->string('nthMaHoaDon',255);
+            $table->string('nthMaHoaDon',255)->unique();
             $table->string('nthMaKhachHang',255)->references('id')->on('NTH_KHACH_HANG1');
             $table->date('nthNgayHoaDon');
+            $table->date('nthNgayNhan');
             $table->string('nthHoTenKhachHang');
             $table->string('nthEmail',255);
-            $table->string('nthMatKhau',255);
             $table->string('nthDienThoai',255);
+            $table->string('nthDiaChi',255);
             $table->float('nthTongTriGia');
             $table->tinyInteger('nthTrangThai');
             $table->timestamps();

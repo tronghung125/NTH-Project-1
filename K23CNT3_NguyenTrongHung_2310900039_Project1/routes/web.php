@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NTH_QUAN_TRIController;
 use App\Http\Controllers\NTH_LOAI_SAN_PHAMController;
 use App\Http\Controllers\NTH_SAN_PHAMController;
-use App\Http\Controllers\NTH_KHACH_HANG1controller;
+use App\Http\Controllers\NTH_KHACH_HANG1Controller;
+use App\Http\Controllers\NTH_HOA_DONController;
+use App\Http\Controllers\NTH_CT_HOA_DONController;
+
 ;
 /*
 |--------------------------------------------------------------------------
@@ -122,3 +125,44 @@ Route::post('/nthadmins/nth-khach-hang/nth-edit/{id}', [NTH_KHACH_HANG1controlle
 //delete
 Route::get('/nthadmins/nth-khach-hang/nth-delete/{id}', [NTH_KHACH_HANG1controller::class, 'nthDelete'])
         ->name('nthAdmins.nthkhachhang.nthdelete');
+
+// Hóa Đơn***************************************
+Route::get('/nthadmins/nth-hoa-don',[NTH_HOA_DONController::class,'nthList'])
+        ->name('nthAdmins.nthhoadon');
+//detail
+Route::get('/nthadmins/nth-hoa-don/nth-detail/{id}', [NTH_HOA_DONController::class, 'nthDetail'])
+        ->name('nthAdmins.nthhoadon.nthDetail');
+//create
+Route::get('/nthadmins/nth-hoa-don/nth-create',[NTH_HOA_DONController::class,'nthCreate'])
+        ->name('nthAdmins.nthhoadon.nthCreate');
+Route::post('/nthadmins/nth-hoa-don/nth-create',[NTH_HOA_DONController::class,'nthCreateSubmit'])
+        ->name('nthAdmins.nthhoadon.nthCreateSubmit');
+//edit
+Route::get('/nthadmins/nth-hoa-don/nth-edit/{id}', [NTH_HOA_DONController::class, 'nthEdit'])
+        ->name('nthAdmins.nthhoadon.nthedit');
+Route::post('/nthadmins/nth-hoa-don/nth-edit/{id}', [NTH_HOA_DONController::class, 'nthEditSubmit'])
+        ->name('nthAdmins.nthhoadon.nthEditSubmit');
+//delete
+Route::get('/nthadmins/nth-hoa-don/nth-delete/{id}', [NTH_HOA_DONController::class, 'nthDelete'])
+        ->name('nthAdmins.nthhoadon.nthdelete');
+
+//CT hoá đơn
+// list
+Route::get('/nthadmins/nth-ct-hoa-don',[NTH_CT_HOA_DONController::class,'nthList'])
+        ->name('nthAdmins.nthcthoadon');
+//detail
+Route::get('/nthadmins/nth-ct-hoa-don/nth-detail/{id}', [NTH_CT_HOA_DONController::class, 'nthDetail'])
+        ->name('nthAdmins.nthcthoadon.nthDetail');
+//create
+Route::get('/nthadmins/nth-ct-hoa-don/nth-create',[NTH_CT_HOA_DONController::class,'nthCreate'])
+        ->name('nthAdmins.nthcthoadon.nthCreate');
+Route::post('/nthadmins/nth-ct-hoa-don/nth-create',[NTH_CT_HOA_DONController::class,'nthCreateSubmit'])        
+->name('nthAdmins.nthcthoadon.nthCreateSubmit');
+//edit
+Route::get('/nthadmins/nth-ct-hoa-don/nth-edit/{id}', [NTH_CT_HOA_DONController::class, 'nthEdit'])
+        ->name('nthAdmins.nthcthoadon.nthEdit');
+Route::post('/nthadmins/nth-ct-hoa-don/nth-edit/{id}', [NTH_CT_HOA_DONController::class, 'nthEditSubmit'])
+        ->name('nthAdmins.nthcthoadon.nthEditSubmit');
+//delete
+Route::get('/nthadmins/nth-ct-hoa-don/nth-delete/{id}', [NTH_CT_HOA_DONController::class, 'nthDelete'])
+        ->name('nthAdmins.nthcthoadon.nthdelete');

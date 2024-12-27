@@ -26,8 +26,12 @@
         </a>
     </li>
     <li class="list-group-item">
-        <a href="">
+        <a href="/nthadmins/nth-hoa-don">
             Danh sách hoá đơn
+        </a>
+    <li class="list-group-item">
+        <a href="/nthadmins/nth-ct-hoa-don">
+            Danh sách chi tiết hoá đơn
         </a>
     </li>
   </ul>

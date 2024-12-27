@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class NTH_LOAI_SAN_PHAM extends Model
+class NTH_HOA_DON extends Model
 {
     use HasFactory;
-    protected $table="NTH_LOAI_SAN_PHAM";
+    protected $table = 'NTH_HOA_DON';
     protected $primaryKey = 'id';
     public $incrementing = false;   
     public $timestamps = true;
