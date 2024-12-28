@@ -6,8 +6,13 @@
         </a>
     </li>
     <li class="list-group-item">
-        <a href="/nthadmins/nth-quan-tri">
+        <a href="/nthadmins/nthdsquantri/nthdanhmuc">
             Danh sách quản trị
+        </a>
+    </li>
+    <li class="list-group-item">
+        <a href="/nthadmins/nth-quan-tri">
+            Danh sách quản trị viên
         </a>
     </li>
     <li class="list-group-item">
@@ -32,6 +37,11 @@
     <li class="list-group-item">
         <a href="/nthadmins/nth-ct-hoa-don">
             Danh sách chi tiết hoá đơn
+        </a>
+    </li>
+    <li class="list-group-item">
+        <a href="/nthadmins/nth-tin-tuc">
+            Danh sách tin tức
         </a>
     </li>
   </ul>

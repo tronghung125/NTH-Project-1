@@ -2,11 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NTH_QUAN_TRIController;
+use App\Http\Controllers\NTH_DS_QUAN_TRIController;
 use App\Http\Controllers\NTH_LOAI_SAN_PHAMController;
 use App\Http\Controllers\NTH_SAN_PHAMController;
 use App\Http\Controllers\NTH_KHACH_HANG1Controller;
 use App\Http\Controllers\NTH_HOA_DONController;
 use App\Http\Controllers\NTH_CT_HOA_DONController;
+use App\Http\Controllers\NTH_TIN_TUCController;
+
 
 ;
 /*
@@ -33,11 +36,25 @@ Route::get('/admins/nthlogin',[NTH_QUAN_TRIController::class,'nthLogout'])->name
 Route::get('/nthadmins/index', function () {
     return view('nthAdmins.index');
 });
+Route::get('/nthadmins/nthdsquantri/nthdanhmuc', [NTH_DS_QUAN_TRIController::class, 'danhmuc'])
+        ->name('nthAdmins.nthdsquantri.danhmuc');
+#admins - tin tức --------------------------------------------------------------------------------------------------------------------------------------
+Route::get('/nthadmins/nthdsquantri/nthtintuc', [NTH_DS_QUAN_TRIController::class, 'tintuc'])
+        ->name('nthAdmins.nthdsquantri.danhmuc.tintuc');
+// Sản phẩm--------------------------------------------------------------------------------------------------------------------------------------
+Route::get('/nthadmins/nthdsquantri/nthsanpham', [NTH_DS_QUAN_TRIController::class, 'sanpham'])
+        ->name('nthAdmins.nthdsquantri.danhmuc.sanpham');
+// Mô tả sản phẩm--------------------------------------------------------------------------------------------------------------------------------------
+Route::get('/nthadmins/nthdsquantri/nthmota/{id}', [NTH_DS_QUAN_TRIController::class, 'mota'])
+        ->name('nthAdmins.nthdsquantri.danhmuc.mota');
+#admins - nguoidung--------------------------------------------------------------------------------------------------------------------------------------
+Route::get('/nthadmins/nthdsquantri/nthnguoidung', [NTH_DS_QUAN_TRIController::class, 'nguoidung'])
+        ->name('nthAdmins.nthdsquantri.nguoidung');
+
 //Quản trị *******************************************************
 // list
 Route::get('/nthadmins/nth-quan-tri',[NTH_QUAN_TRIController::class,'nthList'])
         ->name('nthAdmins.nthquantri');
-
 //detail
 Route::get('/nthadmins/nth-quan-tri/nth-detail/{id}', [NTH_QUAN_TRIController::class, 'nthDetail'])
         ->name('nthAdmins.nthquantri.nthDetail');
@@ -166,3 +183,34 @@ Route::post('/nthadmins/nth-ct-hoa-don/nth-edit/{id}', [NTH_CT_HOA_DONController
 //delete
 Route::get('/nthadmins/nth-ct-hoa-don/nth-delete/{id}', [NTH_CT_HOA_DONController::class, 'nthDelete'])
         ->name('nthAdmins.nthcthoadon.nthdelete');
+
+
+// Tin tức********************************************************************************************************
+// list
+Route::get('/nthadmins/nth-tin-tuc',[NTH_TIN_TUCController::class,'nthList'])
+        ->name('nthAdmins.nthtintuc');
+//detail
+Route::get('/nthadmins/nth-tin-tuc/nth-detail/{id}', [NTH_TIN_TUCController::class, 'nthDetail'])
+        ->name('nthAdmins.nthtintuc.nthDetail');
+//create
+Route::get('/nthadmins/nth-tin-tuc/nth-create',[NTH_TIN_TUCController::class,'nthCreate'])
+        ->name('nthAdmins.nthtintuc.nthcreate');
+Route::post('/nthadmins/nth-tin-tuc/nth-create',[NTH_TIN_TUCController::class,'nthCreateSubmit'])
+        ->name('nthAdmins.nthtintuc.nthCreateSubmit');
+//edit
+Route::get('/nthadmins/nth-tin-tuc/nth-edit/{id}', [NTH_TIN_TUCController::class, 'nthEdit'])
+        ->name('nthAdmins.nthtintuc.nthedit');
+Route::post('/nthadmins/nth-tin-tuc/nth-edit/{id}', [NTH_TIN_TUCController::class, 'nthEditSubmit'])
+        ->name('nthAdmins.nthtintuc.nthEditSubmit');
+//delete
+Route::get('/nthadmins/nth-tin-tuc/nth-delete/{id}', [NTH_TIN_TUCController::class, 'nthDelete'])
+        ->name('nthAdmins.nthtintuc.nthdelete');
+
+
+
+
+
+
+
+
+
