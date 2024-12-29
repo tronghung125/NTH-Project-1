@@ -10,7 +10,6 @@ use App\Http\Controllers\NTH_HOA_DONController;
 use App\Http\Controllers\NTH_CT_HOA_DONController;
 use App\Http\Controllers\NTH_TIN_TUCController;
 
-
 ;
 /*
 |--------------------------------------------------------------------------
@@ -38,16 +37,16 @@ Route::get('/nthadmins/index', function () {
 });
 Route::get('/nthadmins/nthdsquantri/nthdanhmuc', [NTH_DS_QUAN_TRIController::class, 'danhmuc'])
         ->name('nthAdmins.nthdsquantri.danhmuc');
-#admins - tin tức --------------------------------------------------------------------------------------------------------------------------------------
+//tin
 Route::get('/nthadmins/nthdsquantri/nthtintuc', [NTH_DS_QUAN_TRIController::class, 'tintuc'])
         ->name('nthAdmins.nthdsquantri.danhmuc.tintuc');
-// Sản phẩm--------------------------------------------------------------------------------------------------------------------------------------
+// Sản phẩm
 Route::get('/nthadmins/nthdsquantri/nthsanpham', [NTH_DS_QUAN_TRIController::class, 'sanpham'])
         ->name('nthAdmins.nthdsquantri.danhmuc.sanpham');
-// Mô tả sản phẩm--------------------------------------------------------------------------------------------------------------------------------------
+// Mô tả 
 Route::get('/nthadmins/nthdsquantri/nthmota/{id}', [NTH_DS_QUAN_TRIController::class, 'mota'])
         ->name('nthAdmins.nthdsquantri.danhmuc.mota');
-#admins - nguoidung--------------------------------------------------------------------------------------------------------------------------------------
+//Người dùng
 Route::get('/nthadmins/nthdsquantri/nthnguoidung', [NTH_DS_QUAN_TRIController::class, 'nguoidung'])
         ->name('nthAdmins.nthdsquantri.nguoidung');
 
@@ -214,3 +213,14 @@ Route::get('/nthadmins/nth-tin-tuc/nth-delete/{id}', [NTH_TIN_TUCController::cla
 
 
 
+use App\Http\Controllers\NTH_TRANG_CHUController;
+
+// User - Routes
+Route::get('/nthuser', [NTH_TRANG_CHUController::class, 'index'])->name('nthuser.home');
+// Hiển thị chi tiết sản phẩm
+Route::get('/nthuser/show/{id}', [NTH_TRANG_CHUController::class, 'show'])->name('nthuser.show');
+        // search
+Route::get('/search', [NTH_SAN_PHAMController::class, 'search'])->name('nthuser.search');
+        
+
+        
