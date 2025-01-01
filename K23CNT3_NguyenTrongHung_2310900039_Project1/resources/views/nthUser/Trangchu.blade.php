@@ -58,13 +58,55 @@
             padding: 10px 0;
             text-align: center;
         }
+
+
+        .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* Khoảng cách giữa các sản phẩm */
+        }
+
+        .product {
+        width: 250px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+        padding: 20px;
+        }
+
+        .product img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        }
+
+        .price {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #333;
+        }
+
+        .product button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        }
+
+        .product:hover {
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 <body>
 
 <!-- Header -->
 <header>
-    Cây cảnh
+    Bán cây cảnh
 </header>
 
 <!-- Navbar -->
@@ -72,7 +114,7 @@
     <div class="container-fluid">
         <!-- Thêm logo -->
         <a class="navbar-brand" href="/">
-            <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" style="max-height: 50px;">
+            <img src="{{ asset('storage/images/san-pham/logo.png') }}" alt="Logo" style="max-height: 50px;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -100,7 +142,39 @@
 <div class="container-fluid">
     <div class="wrapper">
         <section class="content-body">
-            @yield('content-body', 'Nội dung trang sẽ hiển thị tại đây!')
+            @yield('content-body')
+            <div class="product-container">
+                <div class="product"> 
+                    <img src="{{ asset('storage/images/san-pham/PT001.jpg') }}" alt="Sản phẩm PT001">
+                    <h2 class="price">100.000</h2>
+                    <button>Mua hàng</button>
+                    <button>Thêm vào giỏ</button>
+                </div>
+                <div class="product"> 
+                    <img src="{{ asset('storage/images/san-pham/PT002.jpg') }}" alt="Sản phẩm PT002">
+                    <h2 class="price">100.000</h2>
+                    <button>Mua hàng</button>
+                    <button>Thêm vào giỏ</button>
+                </div>
+                <div class="product"> 
+                    <img src="{{ asset('storage/images/san-pham/PT003.jpg') }}" alt="Sản phẩm PT003">
+                    <h2 class="price">100.000</h2>
+                    <button>Mua hàng</button>
+                    <button>Thêm vào giỏ</button>
+                </div>
+                <div class="product"> 
+                    <img src="{{ asset('storage/images/san-pham/PT002.jpg') }}" alt="Sản phẩm PT002">
+                    <h2 class="price">100.000</h2>
+                    <button>Mua hàng</button>
+                    <button>Thêm vào giỏ</button>
+                </div>
+                <div class="product"> 
+                    <img src="{{ asset('storage/images/san-pham/PT003.jpg') }}" alt="Sản phẩm PT003">
+                    <h2 class="price">100.000</h2>
+                    <button>Mua hàng</button>
+                    <button>Thêm vào giỏ</button>
+                </div>
+            </div>
         </section>
     </div>
 </div>

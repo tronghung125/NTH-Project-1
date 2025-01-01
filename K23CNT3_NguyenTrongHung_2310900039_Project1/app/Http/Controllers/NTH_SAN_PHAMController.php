@@ -100,7 +100,7 @@ class NTH_SAN_PHAMController extends Controller
     $nthsanpham->nthTrangThai = $request->nthTrangThai;
 
     if ($request->hasFile('nthHinhAnh')) {
-        if ($nthsanpham->nthHinhAnh && Storage::disk('public')->exists('img/san_pham/' . $nthsanpham->nthHinhAnh)) {
+        if ($nthsanpham->nthHinhAnh && Storage::disk('public')->exists('img' . $nthsanpham->nthHinhAnh)) {
             Storage::disk('public')->delete('img/san_pham/' . $nthsanpham->nthHinhAnh);
         }
         $imagePath = $request->file('nthHinhAnh')->store('img/san_pham', 'public');

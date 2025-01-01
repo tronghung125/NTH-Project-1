@@ -11,7 +11,6 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
         Schema::create('NTH_TIN_TUC', function (Blueprint $table) {
             $table->id();
             $table->string('nthMaTT')->unique();
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('NTH_TIN_TUC');
     }
 };
