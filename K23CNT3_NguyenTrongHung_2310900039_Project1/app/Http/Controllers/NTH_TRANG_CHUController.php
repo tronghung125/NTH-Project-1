@@ -32,4 +32,24 @@ class NTH_TRANG_CHUController extends Controller
         // Trả về view chi tiết sản phẩm
         return view('nthuser.show', compact('sanPham'));
     }
+    public function gioithieu()
+    {
+        return view('nthUser.nthgioithieu');
+    }
+    public function lienhe()
+    {
+        return view('nthUser.nthlienhe');
+    }
+    public function submitlienhe(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'phone' => 'required|numeric',
+            'address' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'product' => 'required|string',
+        ]);
+
+        return back()->with('success', 'Cảm ơn bạn đã liên hệ với chúng tôi!');
+    }
 }

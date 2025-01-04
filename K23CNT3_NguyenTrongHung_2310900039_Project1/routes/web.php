@@ -220,7 +220,9 @@ Route::get('/nthuser', [NTH_TRANG_CHUController::class, 'index'])->name('nthuser
 // Hiển thị chi tiết sản phẩm
 Route::get('/nthuser/show/{id}', [NTH_TRANG_CHUController::class, 'show'])->name('nthuser.show');
         // search
-Route::get('/search', [NTH_SAN_PHAMController::class, 'search'])->name('nthuser.search');
-        
+Route::get('/about', [NTH_TRANG_CHUController::class, 'gioithieu'])->name('nthuser.about');
+Route::get('/contact', [NTH_TRANG_CHUController::class, 'lienhe'])->name('nthuser.contact');
+Route::post('/submit-contact', [NTH_TRANG_CHUController::class, 'submitlienhe'])->name('nthuser.submitcontact');
+
 
         

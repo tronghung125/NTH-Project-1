@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\NTH_SAN_PHAM; 
 use App\Models\NTH_KHACH_HANG1; 
 use App\Models\NTH_TIN_TUC; 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class NTH_DS_QUAN_TRIController extends Controller
